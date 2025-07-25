@@ -1,23 +1,49 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+
+:root,
+.light {
+  --background: #f5f7fa; /* Light background */
+  --foreground: #18181b; /* Light foreground */
+  --primary: #2563eb;    /* Light primary (blue) */
+  --secondary: #f1f5f9;  /* Light secondary (light gray) */
+  --accent: #f59e42;     /* Light accent (orange) */
+  --muted: #e5e7eb;      /* Light muted (gray) */
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
+  --color-accent: var(--accent);
+  --color-muted: var(--muted);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+
+.dark {
+  --background: #18181b;   /* Dark background */
+  --foreground: #f4f4f5;   /* Dark foreground */
+  --primary: #60a5fa;      /* Dark primary (light blue) */
+  --secondary: #23272f;    /* Dark secondary (dark gray) */
+  --accent: #fbbf24;       /* Dark accent (yellow) */
+  --muted: #27272a;        /* Dark muted (gray) */
 }
+
+
+
+.blue {
+  --background: #e0e7ff;   /* Blue background */
+  --foreground: #1e293b;   /* Blue foreground */
+  --primary: #2563eb;      /* Blue primary */
+  --secondary: #a5b4fc;    /* Blue secondary */
+  --accent: #38bdf8;       /* Blue accent (cyan) */
+  --muted: #c7d2fe;        /* Blue muted */
+}
+
+
 
 body {
   background: var(--background);
